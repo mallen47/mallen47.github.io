@@ -3,9 +3,14 @@ function activateGallery() {
 	let mainImage = document.querySelector("#gallery-photo > img");
 
 	thumbNails.forEach(function(thumbNail) { 
+		// Preload large images
+		let newImageSrc = thumbNail.dataset.largeVersion;
+		let largeVersion = new Image();
+		largeVersion.src = newImageSrc;
+
 		thumbNail.addEventListener("click", function() {
 			// Set the clicked image as the display image
-			mainImage.setAttribute("src", thumbNail.dataset.largeVersion);
+			mainImage.setAttribute("src", largerVersion.src);
 			mainImage.setAttribute("alt", thumbNail.dataset.title);
 			
 			// Change which image is current
