@@ -10,7 +10,7 @@ function activateGallery() {
 
 		thumbNail.addEventListener("click", function() {
 			// Set the clicked image as the display image
-			mainImage.setAttribute("src", largerVersion.src);
+			mainImage.setAttribute("src", largeVersion.src);
 			mainImage.setAttribute("alt", thumbNail.dataset.title);
 			
 			// Change which image is current
